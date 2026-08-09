@@ -48,7 +48,6 @@ export const projects: Project[] = [
 export const socials = [
   { label: 'GitHub', href: 'https://github.com/NickyHariniaina' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ferrissushi' },
-  { label: 'Portfolio', href: 'https://nickyhariniaina.github.io/' },
 ]
 
 export const about = {
