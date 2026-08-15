@@ -13,7 +13,7 @@ export default function Work() {
   return (
     <section className="section section--pad work" id="work">
       <div className="container">
-        <button className="page-back reveal" onClick={goBack} type="button">
+        <button className="page-back" onClick={goBack} type="button">
           <span aria-hidden="true">←</span> Back
         </button>
 
@@ -31,9 +31,6 @@ export default function Work() {
                     <span className="project-card__year">{project.year}</span>
                   </div>
                   <div className="project-card__case-body">
-                    <span className="label project-card__case-label">
-                      Case study
-                    </span>
                     <h3 className="project-card__case-title">{project.title}</h3>
                     <p className="project-card__case-desc">
                       {project.description}

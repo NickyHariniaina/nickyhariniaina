@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import type Lenis from 'lenis'
 import { site, socials } from '../data'
 
 type Props = {
@@ -7,22 +6,18 @@ type Props = {
   onClose: () => void
 }
 
-type LenisWindow = Window & { __lenis?: Lenis }
-
 export default function ContactModal({ open, onClose }: Props) {
   useEffect(() => {
     if (!open) return
 
-    const lenis = (window as LenisWindow).__lenis
-    lenis?.stop()
-
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
     }
+    document.body.style.overflow = 'hidden'
     window.addEventListener('keydown', onKey)
 
     return () => {
-      lenis?.start()
+      document.body.style.overflow = ''
       window.removeEventListener('keydown', onKey)
     }
   }, [open, onClose])

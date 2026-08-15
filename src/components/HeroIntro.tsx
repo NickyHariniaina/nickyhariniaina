@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { site } from '../data'
-import RotatingText from './RotatingText'
 import ContactModal from './ContactModal'
 
 export default function HeroIntro() {
@@ -10,9 +9,7 @@ export default function HeroIntro() {
   return (
     <section className="hero">
       <div className="container hero__inner">
-        <p className="hero__meta">
-          <RotatingText words={site.roles} />
-        </p>
+        <p className="hero__meta">{site.role}</p>
 
         <nav className="hero__nav" aria-label="Primary">
           <Link to="/about" className="hero__nav-item">

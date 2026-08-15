@@ -6,12 +6,12 @@ export default function Footer() {
     <footer className="footer" id="contact">
       <div className="container">
         <div className="grid-row footer__cta">
-          <div className="grid-row__label reveal">
+          <div className="grid-row__label">
             <span className="label">Get in touch</span>
           </div>
           <div className="grid-row__content">
-            <h2 className="display footer__title reveal">Interested?</h2>
-            <div className="footer__actions reveal">
+            <h2 className="display footer__title">Interested?</h2>
+            <div className="footer__actions">
               <a className="button" href={`mailto:${site.email}`}>
                 Get in touch
               </a>

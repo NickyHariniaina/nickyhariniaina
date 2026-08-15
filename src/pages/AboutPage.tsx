@@ -12,17 +12,17 @@ export default function AboutPage() {
   return (
     <section className="section section--pad about">
       <div className="container">
-        <button className="page-back reveal" onClick={goBack} type="button">
+        <button className="page-back" onClick={goBack} type="button">
           <span aria-hidden="true">←</span> Back
         </button>
 
         <div className="grid-row about__block">
-          <div className="grid-row__label reveal">
+          <div className="grid-row__label">
             <span className="label">Skills</span>
           </div>
           <div className="grid-row__content">
-            <h3 className="about__sub reveal">Languages</h3>
-            <ul className="about__chips reveal">
+            <h3 className="about__sub">Languages</h3>
+            <ul className="about__chips">
               {about.languages.map((lang) => (
                 <li key={lang}>
                   <span className="about__chip">{lang}</span>
@@ -30,8 +30,8 @@ export default function AboutPage() {
               ))}
             </ul>
 
-            <h3 className="about__sub reveal">Tools</h3>
-            <ul className="about__chips reveal">
+            <h3 className="about__sub">Tools</h3>
+            <ul className="about__chips">
               {about.tools.map((tool) => (
                 <li key={tool}>
                   <span className="about__chip">{tool}</span>
@@ -42,12 +42,12 @@ export default function AboutPage() {
         </div>
 
         <div className="grid-row about__block">
-          <div className="grid-row__label reveal">
+          <div className="grid-row__label">
             <span className="label">Parcours</span>
           </div>
           <div className="grid-row__content">
             {about.education.map((edu) => (
-              <div key={edu.school} className="about__entry reveal">
+              <div key={edu.school} className="about__entry">
                 <div className="about__entry-head">
                   <span className="about__entry-title">{edu.degree}</span>
                   <span className="about__entry-date">{edu.period}</span>
@@ -59,11 +59,11 @@ export default function AboutPage() {
         </div>
 
         <div className="grid-row about__block">
-          <div className="grid-row__label reveal">
+          <div className="grid-row__label">
             <span className="label">Experiences</span>
           </div>
           <div className="grid-row__content">
-            <div className="about__experience reveal">
+            <div className="about__experience">
               <div className="about__experience-head">
                 <span className="about__experience-title">
                   {about.experience.title}
@@ -79,7 +79,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="about__cta reveal">
+        <div className="about__cta">
           <Link className="button" to="/work">
             View my work
           </Link>
