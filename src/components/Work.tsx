@@ -1,58 +1,52 @@
-import { projects, socials } from '../data'
+import { projects } from '../data'
 
 export default function Work() {
-  const github = socials.find((s) => s.label === 'GitHub')
-
   return (
     <section className="block">
-      <h2 className="command">~/$ cat projects.txt</h2>
-      <p>
-        Here is a list of my most relevant projects. For an exhaustive list,
-        check out my{' '}
-        <a className="link" href={github?.href} target="_blank" rel="noreferrer">
-          GitHub
-        </a>{' '}
-        profile.
-      </p>
+      <h2 className="command">I work on:</h2>
       <ul className="projects__list">
         {projects.map((project) => (
           <li className="project" key={project.id}>
-            <div className="project__head">
-              <h3 className="project__name">— {project.title}</h3>
-              <div className="project__links">
-                {project.preview && (
-                  <span>
-                    [{' '}
-                    <a
-                      className="link"
-                      href={project.preview}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      preview
-                    </a>{' '}
-                    ]
-                  </span>
-                )}
-                {project.source && (
-                  <span>
-                    [{' '}
-                    <a
-                      className="link"
-                      href={project.source}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      source
-                    </a>{' '}
-                    ]
-                  </span>
-                )}
+            <div className="term">
+              <div className="term__bar">
+                <span className="term__dots" aria-hidden="true">
+                  <span className="term__dot term__dot--blue" />
+                  <span className="term__dot term__dot--orange" />
+                  <span className="term__dot term__dot--green" />
+                </span>
+                <span className="term__file">~/projects/{project.id}</span>
               </div>
-            </div>
-            <p className="project__desc">{project.description}</p>
-            <div className="project__tags">
-              {project.tags.map((tag) => `#${tag}`).join(' ')}
+              <div className="term__body">
+                <h3 className="project__name">— {project.title}</h3>
+                <p className="project__desc">{project.description}</p>
+                <div className="project__footer">
+                  <div className="project__tags">
+                    {project.tags.map((tag) => `#${tag}`).join(' ')}
+                  </div>
+                  <div className="project__actions">
+                    {project.preview && (
+                      <a
+                        className="project__action"
+                        href={project.preview}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        preview
+                      </a>
+                    )}
+                    {project.source && (
+                      <a
+                        className="project__action"
+                        href={project.source}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        source
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </li>
         ))}

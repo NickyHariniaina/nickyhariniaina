@@ -1,27 +1,48 @@
 :root {
-  --bg: #0e0e11;
-  --ink: #d7d7dc;
-  --muted: #8b8b94;
-  --primary: #d6958a;
-  --primary-light: #e6b5aa;
-  --secondary: #eda777;
+  --bg: #ffffff;
+  --ink: #1f2328;
+  --muted: #57606a;
+  --primary: #1a7f37;
+  --primary-light: #4ac26b;
+  --secondary: #005cc5;
+
+  --pal-1: #005cc5;
+  --pal-2: #a31515;
+  --pal-3: #1a7f37;
+  --pal-4: #795e26;
 
   --font: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
 
-  color-scheme: dark;
+  color-scheme: light;
   color: var(--ink);
   background: var(--bg);
   font-family: var(--font);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme='dark'] {
+  --bg: #0e0e11;
+  --ink: #d7d7dc;
+  --muted: #8b8b94;
+  --primary: #6a9955;
+  --primary-light: #98c379;
+  --secondary: #569cd6;
+
+  --pal-1: #569cd6;
+  --pal-2: #ce9178;
+  --pal-3: #6a9955;
+  --pal-4: #dcdcaa;
+
+  color-scheme: dark;
+}
+
 ::selection {
-  background: var(--primary);
-  color: var(--bg);
+  background: var(--primary-light);
+  color: var(--ink);
 }
 
 *,

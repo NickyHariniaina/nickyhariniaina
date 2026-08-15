@@ -1,97 +1,35 @@
 export const site = {
   name: 'Nicky Hariniaina',
-  role: 'Backend Developer & DevOps',
-  host: 'devops',
-  location: 'Antananarivo, Madagascar',
-  email: 'nickyharini1na@gmail.com',
-  phone: '+261 38 15 840 53',
-  phoneHref: '+261381584053',
-  ascii: `,----------------------.
-| > nicky@devops      |
-| > whoami            |
-| > backend developer |
-| > devops engineer   |
-'----------------------'`,
+  role: 'Backend & Systems Developer',
 }
 
-export type Segment = { t: string; h?: boolean }
+export type Segment = { t: string; h?: boolean; href?: string }
 
 export const about = {
   whoami: [
+    [{ t: "Helloooo, I'm Nicky." }],
     [
-      { t: 'I am ' },
-      { t: 'Nicky', h: true },
-      { t: ', an enthusiastic software developer from ' },
-      { t: 'Madagascar', h: true },
-      { t: ', primarily using ' },
+      { t: 'I build ' },
+      { t: 'weird software and systems', h: true },
+      { t: ' with ' },
+      { t: 'C/C++', h: true },
+      { t: '. But I also gained competence in ' },
       { t: 'Java', h: true },
       { t: ', ' },
       { t: 'TypeScript', h: true },
-      { t: ', ' },
-      { t: 'C/C++', h: true },
-      { t: ', and ' },
-      { t: 'Python', h: true },
-      { t: '. Currently in my second year at ' },
-      { t: 'HEI Madagascar', h: true },
-      { t: ', pursuing a software engineering degree. I enjoy building clean ' },
-      { t: 'backend services', h: true },
       { t: ' and ' },
-      { t: 'infrastructure', h: true },
-      { t: ', and I compete in ' },
-      { t: 'CTF', h: true },
-      { t: ', ' },
-      { t: 'algorithm', h: true },
-      { t: ', and ' },
-      { t: 'development', h: true },
-      { t: ' challenges — I placed ' },
-      { t: '2nd', h: true },
-      { t: ' in the ' },
-      { t: 'Hackathon Intra-HEI', h: true },
+      { t: 'Python', h: true },
+      { t: ' while studying at ' },
+      { t: 'HEI', h: true, href: 'https://hei.school' },
       { t: '.' },
     ],
     [
-      { t: 'Besides programming, I enjoy ' },
-      { t: 'volley-ball', h: true },
-      { t: ' and tinkering with ' },
-      { t: 'low-level systems', h: true },
-      { t: ' (OSdev).' },
-    ],
-  ],
-  funFacts: [
-    [
-      { t: 'I can speak ' },
-      { t: 'Malagasy', h: true },
-      { t: ', ' },
-      { t: 'French', h: true },
-      { t: ', and ' },
-      { t: 'English', h: true },
-      { t: ' fluently.' },
-    ],
-    [
-      { t: 'I placed ' },
-      { t: '2nd', h: true },
-      { t: ' in the ' },
-      { t: 'Hackathon Intra-HEI', h: true },
-      { t: ' (CTF · Algorithme · Dev).' },
-    ],
-    [
-      { t: 'I love ' },
-      { t: 'volley-ball', h: true },
-      { t: ' and low-level ' },
-      { t: 'OSdev', h: true },
+      { t: "I'm passionate about " },
+      { t: 'OSS', h: true },
       { t: '.' },
     ],
+    [{ t: 'I like science and history.' }],
   ],
-  neofetch: [
-    { label: 'Name', value: 'Nicky Hariniaina' },
-    { label: 'Pronouns', value: 'he/him' },
-    { label: 'Location', value: 'Antananarivo, Madagascar' },
-    { label: 'Education', value: 'HEI Madagascar (L2)' },
-    { label: 'Languages', value: 'Java, TypeScript, C/C++' },
-    { label: 'Tools', value: 'AWS, Docker, Spring Boot, Next.js' },
-    { label: 'Interests', value: 'Web, low-level, OSdev' },
-  ],
-  palette: ['#e6b5aa', '#eda777', '#d6958a', '#3a3a44'],
 }
 
 export type Project = {
@@ -112,6 +50,36 @@ export const projects: Project[] = [
     preview: 'https://brainfarter.vercel.app',
     source: 'https://github.com/NickyHariniaina/Brainfart',
     tags: ['nextjs', 'react', 'typescript', 'prisma', 'realtime', 'ai'],
+  },
+  {
+    id: 'chengine',
+    title: 'chengine',
+    description: 'A C chess engine.',
+    source: 'https://github.com/NickyHariniaina/chengine',
+    tags: ['c', 'chess'],
+  },
+  {
+    id: 'xtrmv',
+    title: 'xtrmv',
+    description:
+      'A minimalist CLI text editor written in Rust, inspired by Vi.',
+    source: 'https://github.com/NickyHariniaina/xtrmv',
+    tags: ['rust', 'cli', 'text-editor'],
+  },
+  {
+    id: 'reviewer-web',
+    title: 'reviewer-web',
+    description:
+      'GitHub-style code review UI for AI-generated code, that copies the review so you can paste it into opencode.',
+    source: 'https://github.com/NickyHariniaina/reviewer-web',
+    tags: ['typescript', 'react', 'ai', 'code-review'],
+  },
+  {
+    id: 'kkkk',
+    title: 'kkkk',
+    description: 'An x86 kernel (in progress).',
+    source: 'https://github.com/NickyHariniaina/kkk',
+    tags: ['c', 'osdev', 'x86', 'kernel'],
   },
 ]
 
@@ -137,9 +105,4 @@ export const contacts = [
     value: 'Antananarivo, Madagascar',
     href: 'https://www.google.com/maps/search/Antananarivo,+Madagascar',
   },
-]
-
-export const socials = [
-  { label: 'GitHub', href: 'https://github.com/NickyHariniaina' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ferrissushi' },
 ]
