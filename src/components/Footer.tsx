@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { site, projects, socials } from '../data'
 
 export default function Footer() {
@@ -29,7 +28,7 @@ export default function Footer() {
             <ul>
               {projects.slice(0, 4).map((p) => (
                 <li key={p.id}>
-                  <Link to="/work">{p.title}</Link>
+                  <a href="#work">{p.title}</a>
                 </li>
               ))}
             </ul>

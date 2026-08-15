@@ -1,22 +1,10 @@
-import { Link, useNavigate } from 'react-router-dom'
 import { projects } from '../data'
 import Art from './Art'
 
 export default function Work() {
-  const navigate = useNavigate()
-
-  const goBack = () => {
-    if (window.history.length > 1) navigate(-1)
-    else navigate('/')
-  }
-
   return (
     <section className="section section--pad work" id="work">
       <div className="container">
-        <button className="page-back" onClick={goBack} type="button">
-          <span aria-hidden="true">←</span> Back
-        </button>
-
         <div className="work__grid">
           {projects.map((project) => {
             const content =
@@ -66,9 +54,9 @@ export default function Work() {
                     {content}
                   </a>
                 ) : (
-                  <Link className="project-card__link" to="/contact">
+                  <a className="project-card__link" href="#work">
                     {content}
-                  </Link>
+                  </a>
                 )}
               </article>
             )

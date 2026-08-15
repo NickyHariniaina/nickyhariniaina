@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { site } from '../data'
 import ContactModal from './ContactModal'
 
@@ -7,17 +6,17 @@ export default function HeroIntro() {
   const [contactOpen, setContactOpen] = useState(false)
 
   return (
-    <section className="hero">
+    <section className="hero" id="top">
       <div className="container hero__inner">
         <p className="hero__meta">{site.role}</p>
 
         <nav className="hero__nav" aria-label="Primary">
-          <Link to="/about" className="hero__nav-item">
+          <a href="#about" className="hero__nav-item">
             <span>About me</span>
             <span className="hero__nav-arrow" aria-hidden="true">
               →
             </span>
-          </Link>
+          </a>
           <button
             type="button"
             className="hero__nav-item"

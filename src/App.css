@@ -26,6 +26,31 @@
   letter-spacing: 0.02em;
 }
 
+.nav__links ul {
+  display: flex;
+  gap: 28px;
+}
+
+.nav__links a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.nav__links a:hover {
+  color: var(--paper);
+  text-decoration-color: var(--paper);
+}
+
+#about,
+#work,
+#contact {
+  scroll-margin-top: 72px;
+}
+
 /* ---------------------------------- */
 /* Hero                                */
 /* ---------------------------------- */
@@ -217,27 +242,6 @@
 
 .about .label {
   color: rgba(255, 255, 255, 0.5);
-}
-
-.page-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 48px;
-  padding: 0;
-  border: none;
-  background: none;
-  color: var(--paper);
-  font-size: 14px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: rgba(255, 255, 255, 0.35);
-  cursor: pointer;
-  transition: text-decoration-color 0.15s ease;
-}
-
-.page-back:hover {
-  text-decoration-color: var(--paper);
 }
 
 .about__block {
@@ -592,10 +596,6 @@
 
   .hero__nav {
     gap: 8px 24px;
-  }
-
-  .page-back {
-    margin-bottom: 32px;
   }
 
   .about__block {

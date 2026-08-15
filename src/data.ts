@@ -14,12 +14,6 @@ export const site = {
     'Software developer focused on crafting fast, thoughtful web products — from concept and interface to clean, resilient code.',
 }
 
-export const navLinks = [
-  { label: 'Work', to: '/work' },
-  { label: 'About', to: '/about' },
-  { label: 'Contact', to: '/contact' },
-]
-
 export type Project = {
   id: string
   title: string

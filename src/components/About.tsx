@@ -1,21 +1,9 @@
-import { Link, useNavigate } from 'react-router-dom'
 import { about } from '../data'
 
-export default function AboutPage() {
-  const navigate = useNavigate()
-
-  const goBack = () => {
-    if (window.history.length > 1) navigate(-1)
-    else navigate('/')
-  }
-
+export default function About() {
   return (
-    <section className="section section--pad about">
+    <section className="section section--pad about" id="about">
       <div className="container">
-        <button className="page-back" onClick={goBack} type="button">
-          <span aria-hidden="true">←</span> Back
-        </button>
-
         <div className="grid-row about__block">
           <div className="grid-row__label">
             <span className="label">Skills</span>
@@ -80,9 +68,9 @@ export default function AboutPage() {
         </div>
 
         <div className="about__cta">
-          <Link className="button" to="/work">
+          <a className="button" href="#work">
             View my work
-          </Link>
+          </a>
         </div>
       </div>
     </section>
