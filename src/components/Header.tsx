@@ -10,7 +10,7 @@ export default function Header() {
         className="header__avatar"
       />
       <h1 className="header__name">{site.name}</h1>
-      <p className="header__role">&lt;&gt; {site.role} &lt;/&gt;</p>
+      <p className="header__role">/* {site.role} */</p>
     </header>
   )
 }

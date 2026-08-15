@@ -37,6 +37,7 @@
 
 .header__role {
   font-size: 14px;
+  color: var(--muted);
 }
 
 /* ---------------------------------- */
