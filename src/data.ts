@@ -91,7 +91,7 @@ export const about = {
     { label: 'Tools', value: 'AWS, Docker, Spring Boot, Next.js' },
     { label: 'Interests', value: 'Web, low-level, OSdev' },
   ],
-  palette: ['#dfb19a', '#e3906d', '#975f59', '#303246'],
+  palette: ['#e6b5aa', '#eda777', '#d6958a', '#3a3a44'],
 }
 
 export type Project = {

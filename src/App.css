@@ -27,7 +27,7 @@
   height: 144px;
   border-radius: 50%;
   background: var(--primary-light);
-  color: var(--primary);
+  color: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;

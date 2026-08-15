@@ -1,14 +1,15 @@
 :root {
-  --bg: #ffffff;
-  --ink: #303246;
-  --muted: #6b7280;
-  --primary: #975f59;
-  --primary-light: #dfb19a;
-  --secondary: #e3906d;
+  --bg: #0e0e11;
+  --ink: #d7d7dc;
+  --muted: #8b8b94;
+  --primary: #d6958a;
+  --primary-light: #e6b5aa;
+  --secondary: #eda777;
 
   --font: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
 
+  color-scheme: dark;
   color: var(--ink);
   background: var(--bg);
   font-family: var(--font);
@@ -19,8 +20,8 @@
 }
 
 ::selection {
-  background: var(--primary-light);
-  color: var(--ink);
+  background: var(--primary);
+  color: var(--bg);
 }
 
 *,
