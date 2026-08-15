@@ -1,68 +1,62 @@
-import { projects } from '../data'
-import Art from './Art'
+import { projects, socials } from '../data'
 
 export default function Work() {
-  return (
-    <section className="section section--pad work" id="work">
-      <div className="container">
-        <div className="work__grid">
-          {projects.map((project) => {
-            const content =
-              project.kind === 'case' ? (
-                <div className="project-card__case">
-                  <div className="project-card__tags">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="project-card__tag">
-                        {tag}
-                      </span>
-                    ))}
-                    <span className="project-card__year">{project.year}</span>
-                  </div>
-                  <div className="project-card__case-body">
-                    <h3 className="project-card__case-title">{project.title}</h3>
-                    <p className="project-card__case-desc">
-                      {project.description}
-                    </p>
-                    <span className="project-card__case-cta">View project</span>
-                  </div>
-                </div>
-              ) : (
-                <>
-                  <div className="project-card__tags">
-                    <h3 className="project-card__title">{project.title}</h3>
-                    <span className="project-card__sub">{project.subtitle}</span>
-                    <span className="project-card__year">{project.year}</span>
-                  </div>
-                  <div className="project-card__image">
-                    <Art id={project.id} />
-                  </div>
-                </>
-              )
+  const github = socials.find((s) => s.label === 'GitHub')
 
-            return (
-              <article
-                key={project.id}
-                className={`project-card project-card--${project.kind}`}
-              >
-                {project.href ? (
-                  <a
-                    className="project-card__link"
-                    href={project.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {content}
-                  </a>
-                ) : (
-                  <a className="project-card__link" href="#work">
-                    {content}
-                  </a>
+  return (
+    <section className="block">
+      <h2 className="command">~/$ cat projects.txt</h2>
+      <p>
+        Here is a list of my most relevant projects. For an exhaustive list,
+        check out my{' '}
+        <a className="link" href={github?.href} target="_blank" rel="noreferrer">
+          GitHub
+        </a>{' '}
+        profile.
+      </p>
+      <ul className="projects__list">
+        {projects.map((project) => (
+          <li className="project" key={project.id}>
+            <div className="project__head">
+              <h3 className="project__name">— {project.title}</h3>
+              <div className="project__links">
+                {project.preview && (
+                  <span>
+                    [{' '}
+                    <a
+                      className="link"
+                      href={project.preview}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      preview
+                    </a>{' '}
+                    ]
+                  </span>
                 )}
-              </article>
-            )
-          })}
-        </div>
-      </div>
+                {project.source && (
+                  <span>
+                    [{' '}
+                    <a
+                      className="link"
+                      href={project.source}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      source
+                    </a>{' '}
+                    ]
+                  </span>
+                )}
+              </div>
+            </div>
+            <p className="project__desc">{project.description}</p>
+            <div className="project__tags">
+              {project.tags.map((tag) => `#${tag}`).join(' ')}
+            </div>
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }

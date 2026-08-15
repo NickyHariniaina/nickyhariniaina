@@ -1,42 +1,25 @@
 :root {
-  --ink: #000;
-  --paper: #fff;
-  --ground: #000;
-  --hairline: rgba(255, 255, 255, 0.16);
-  --muted: #a3a3a3;
-  --label: #8a8a8a;
-  --accent: #fff;
+  --bg: #ffffff;
+  --ink: #303246;
+  --muted: #6b7280;
+  --primary: #975f59;
+  --primary-light: #dfb19a;
+  --secondary: #e3906d;
 
-  --font: ui-monospace, 'Cascadia Code', 'SF Mono', 'JetBrains Mono', Menlo,
-    Consolas, 'Liberation Mono', monospace;
+  --font: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
 
-  --type-display: 34px;
-  --type-h1: 26px;
-  --type-lead: 20px;
-  --type-body: 16px;
-  --type-body-sm: 14px;
-  --type-label: 12px;
-
-  --track-display: 0;
-
-  --space-xs: 24px;
-  --space-s: 48px;
-  --space-m: 72px;
-  --space-l: 96px;
-  --space-xl: 120px;
-
-  --radius-card: 0;
-  --radius-btn: 0;
-
-  color: var(--paper);
-  background: var(--ink);
+  color: var(--ink);
+  background: var(--bg);
   font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: var(--paper);
+  background: var(--primary-light);
   color: var(--ink);
 }
 
@@ -47,19 +30,14 @@
 }
 
 html {
-  background: #000;
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
-  color: var(--paper);
-  background: var(--ink);
-  font-size: var(--type-body);
-  line-height: 160%;
-  overflow-x: hidden;
+  color: var(--ink);
+  background: var(--bg);
 }
 
 h1,
@@ -94,72 +72,7 @@ button {
   font: inherit;
 }
 
-.site {
-  background: var(--ink);
-}
-
-.container {
-  width: min(100% - 48px, 940px);
-  margin-inline: auto;
-}
-
-.section {
-  padding-block: var(--space-l);
-}
-
-.section--pad {
-  padding-block: var(--space-xl);
-}
-
-.label {
-  color: var(--label);
-  font-size: var(--type-label);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.display {
-  font-size: var(--type-display);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: var(--track-display);
-}
-
-.lead {
-  font-size: var(--type-lead);
-  line-height: 1.5;
-  color: var(--paper);
-  max-width: 40ch;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--paper);
-  font-size: var(--type-body);
-  font-weight: 500;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: rgba(255, 255, 255, 0.35);
-  transition:
-    background 0.15s ease,
-    color 0.15s ease,
-    text-decoration-color 0.15s ease;
-}
-
-.button:hover {
-  background: var(--paper);
-  color: var(--ink);
-  text-decoration-color: var(--paper);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   *,
   *::before,
   *::after {

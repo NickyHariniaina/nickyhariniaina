@@ -1,78 +1,70 @@
-import { about } from '../data'
+import { about, site, type Segment } from '../data'
+
+function Segments({ parts }: { parts: Segment[] }) {
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.h ? (
+          <span className="hl" key={i}>
+            {part.t}
+          </span>
+        ) : (
+          <span key={i}>{part.t}</span>
+        ),
+      )}
+    </>
+  )
+}
 
 export default function About() {
   return (
-    <section className="section section--pad about" id="about">
-      <div className="container">
-        <div className="grid-row about__block">
-          <div className="grid-row__label">
-            <span className="label">Skills</span>
-          </div>
-          <div className="grid-row__content">
-            <h3 className="about__sub">Languages</h3>
-            <ul className="about__chips">
-              {about.languages.map((lang) => (
-                <li key={lang}>
-                  <span className="about__chip">{lang}</span>
-                </li>
-              ))}
-            </ul>
+    <>
+      <section className="block">
+        <h2 className="command">~/$ whoami</h2>
+        {about.whoami.map((paragraph, i) => (
+          <p key={i}>
+            <Segments parts={paragraph} />
+          </p>
+        ))}
+      </section>
 
-            <h3 className="about__sub">Tools</h3>
-            <ul className="about__chips">
-              {about.tools.map((tool) => (
-                <li key={tool}>
-                  <span className="about__chip">{tool}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <div className="facts">
+        <h3>Fun facts:</h3>
+        <ul>
+          {about.funFacts.map((fact, i) => (
+            <li key={i}>
+              <Segments parts={fact} />
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        <div className="grid-row about__block">
-          <div className="grid-row__label">
-            <span className="label">Parcours</span>
+      <section className="block">
+        <h2 className="command">~/$ neofetch</h2>
+        <div className="neofetch">
+          <div className="neofetch__art" aria-hidden="true">
+            <pre>{site.ascii}</pre>
           </div>
-          <div className="grid-row__content">
-            {about.education.map((edu) => (
-              <div key={edu.school} className="about__entry">
-                <div className="about__entry-head">
-                  <span className="about__entry-title">{edu.degree}</span>
-                  <span className="about__entry-date">{edu.period}</span>
-                </div>
-                <span className="about__entry-school">{edu.school}</span>
+          <div className="neofetch__info">
+            <div className="prompt">
+              <span className="hl">nicky</span>@
+              <span className="hl">{site.host}</span>
+            </div>
+            <div className="neofetch__sep">---------------------------------</div>
+            {about.neofetch.map((row) => (
+              <div className="neofetch__row" key={row.label}>
+                <b>{row.label}: </b>
+                {row.value}
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="grid-row about__block">
-          <div className="grid-row__label">
-            <span className="label">Experiences</span>
-          </div>
-          <div className="grid-row__content">
-            <div className="about__experience">
-              <div className="about__experience-head">
-                <span className="about__experience-title">
-                  {about.experience.title}
-                </span>
-                <span className="about__experience-award">
-                  {about.experience.award}
-                </span>
-              </div>
-              <p className="about__experience-tags">
-                {about.experience.tags.join(' · ')}
-              </p>
+            <div className="neofetch__palette">
+              {about.palette.map((color) => (
+                <span key={color} style={{ background: color }} />
+              ))}
             </div>
           </div>
         </div>
-
-        <div className="about__cta">
-          <a className="button" href="#work">
-            View my work
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

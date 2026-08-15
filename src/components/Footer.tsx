@@ -1,63 +1,62 @@
-import { site, projects, socials } from '../data'
+import { site, contacts, socials } from '../data'
 
 export default function Footer() {
   return (
-    <footer className="footer" id="contact">
-      <div className="container">
-        <div className="grid-row footer__cta">
-          <div className="grid-row__label">
-            <span className="label">Get in touch</span>
-          </div>
-          <div className="grid-row__content">
-            <h2 className="display footer__title">Interested?</h2>
-            <div className="footer__actions">
-              <a className="button" href={`mailto:${site.email}`}>
-                Get in touch
-              </a>
-              <span className="footer__or">…or email me at</span>
-              <a className="footer__email" href={`mailto:${site.email}`}>
-                {site.email}
-              </a>
-            </div>
-          </div>
-        </div>
+    <>
+      <section className="block">
+        <h2 className="command">~/$ cat contacts.yml</h2>
+        <ul className="contacts__list">
+          {contacts.map((contact) => (
+            <li key={contact.label}>
+              <span className="contacts__label">- {contact.label}: </span>
+              {contact.href ? (
+                <a
+                  className="link"
+                  href={contact.href}
+                  target={
+                    contact.href.startsWith('http') ? '_blank' : undefined
+                  }
+                  rel="noreferrer"
+                >
+                  {contact.value}
+                </a>
+              ) : (
+                <span>{contact.value}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+        <p className="contacts__comment">
+          # You can also reach me on social media
+        </p>
+      </section>
 
-        <div className="footer__columns">
-          <div className="footer__col">
-            <span className="label">Work</span>
-            <ul>
-              {projects.slice(0, 4).map((p) => (
-                <li key={p.id}>
-                  <a href="#work">{p.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="footer__col">
-            <span className="label">Connect</span>
-            <ul>
-              {socials.map((s) => (
-                <li key={s.label}>
-                  <a href={s.href} target="_blank" rel="noreferrer">
-                    {s.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="footer__col footer__col--note">
-            <p className="lead footer__note">
-              {site.availability}. Based in {site.location}.
-            </p>
-          </div>
+      <footer className="footer">
+        <div className="footer__sep">
+          ================================================
         </div>
-
-        <div className="footer__bar">
-          <span>© {new Date().getFullYear()}</span>
-          <span>{site.name}</span>
-          <span>{site.location}</span>
+        <div className="footer__built">
+          Built with <span className="hl">♥</span> using{' '}
+          <span className="hl">React</span> and <span className="hl">Vite</span>
         </div>
-      </div>
-    </footer>
+        <div className="footer__socials">
+          {socials.map((social) => (
+            <a
+              className="link"
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {social.label}
+            </a>
+          ))}
+        </div>
+        <div className="footer__copyright">
+          ©{new Date().getFullYear()} {site.name}.
+        </div>
+        <div className="footer__vim">vim:tw=78:ts=4:noet:ft=html:norl:</div>
+      </footer>
+    </>
   )
 }
