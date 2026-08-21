@@ -59,6 +59,14 @@ export const projects: Project[] = [
     tags: ['c', 'chess'],
   },
   {
+    id: 'nopun',
+    title: 'nopun',
+    description:
+      'An interpreted programming language where you cannot use punctuation.',
+    source: 'https://github.com/NickyHariniaina/nopun',
+    tags: ['c', 'interpreter', 'language'],
+  },
+  {
     id: 'xtrmv',
     title: 'xtrmv',
     description:
