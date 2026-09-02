@@ -56,6 +56,7 @@ export const projects: Project[] = [
     title: 'nopun',
     description:
       'An interpreted programming language where you cannot use punctuation.',
+    preview: 'https://nopunc.vercel.app/',
     source: 'https://github.com/NickyHariniaina/nopun',
     tags: ['c', 'interpreter', 'language'],
   },
