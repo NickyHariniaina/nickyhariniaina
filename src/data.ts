@@ -68,21 +68,6 @@ export const projects: Project[] = [
     source: 'https://github.com/NickyHariniaina/xtrmv',
     tags: ['rust', 'cli', 'text-editor'],
   },
-  {
-    id: 'reviewer-web',
-    title: 'reviewer-web',
-    description:
-      'GitHub-style code review UI for AI-generated code, that copies the review so you can paste it into opencode.',
-    source: 'https://github.com/NickyHariniaina/reviewer-web',
-    tags: ['typescript', 'react', 'ai', 'code-review'],
-  },
-  {
-    id: 'kkkk',
-    title: 'kkkk',
-    description: 'An x86 kernel (in progress).',
-    source: 'https://github.com/NickyHariniaina/kkk',
-    tags: ['c', 'osdev', 'x86', 'kernel'],
-  },
 ]
 
 export const contacts = [
