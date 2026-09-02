@@ -52,13 +52,6 @@ export const projects: Project[] = [
     tags: ['nextjs', 'react', 'typescript', 'prisma', 'realtime', 'ai'],
   },
   {
-    id: 'chengine',
-    title: 'chengine',
-    description: 'A C chess engine.',
-    source: 'https://github.com/NickyHariniaina/chengine',
-    tags: ['c', 'chess'],
-  },
-  {
     id: 'nopun',
     title: 'nopun',
     description:
