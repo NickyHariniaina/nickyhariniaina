@@ -13,22 +13,19 @@ export const about = {
       { t: 'weird software and systems', h: true },
       { t: ' with ' },
       { t: 'C/C++', h: true },
-      { t: '. But I also gained competence in ' },
+      { t: '. But I\'m also competent in ' },
       { t: 'Java', h: true },
       { t: ', ' },
       { t: 'TypeScript', h: true },
       { t: ' and ' },
       { t: 'Python', h: true },
-      { t: ' while studying at ' },
-      { t: 'HEI', h: true, href: 'https://hei.school' },
       { t: '.' },
     ],
     [
       { t: "I'm passionate about " },
-      { t: 'OSS', h: true },
+      { t: 'OSS, history, science, theology, cybersecurity, volleyball, low level programming, and more', h: true },
       { t: '.' },
     ],
-    [{ t: 'I like science and history.' }],
   ],
 }
 
@@ -59,14 +56,6 @@ export const projects: Project[] = [
     preview: 'https://nopunc.vercel.app/',
     source: 'https://github.com/NickyHariniaina/nopun',
     tags: ['c', 'interpreter', 'language'],
-  },
-  {
-    id: 'xtrmv',
-    title: 'xtrmv',
-    description:
-      'A minimalist CLI text editor written in Rust, inspired by Vi.',
-    source: 'https://github.com/NickyHariniaina/xtrmv',
-    tags: ['rust', 'cli', 'text-editor'],
   },
 ]
 
