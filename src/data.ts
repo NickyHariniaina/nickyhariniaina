@@ -10,7 +10,7 @@ export const about = {
         [{ t: "Helloooo, I'm Nicky." }],
         [
             { t: "I build " },
-            { t: "weird software and systems", h: true },
+            { t: "software and systems", h: true },
             { t: " with " },
             { t: "C/C++", h: true },
             { t: ". But I'm also competent in " },
