@@ -2,7 +2,7 @@ import { contacts } from '../data'
 
 export default function Footer() {
   return (
-    <section className="block">
+    <section className="block contacts-panel">
       <span className="eyebrow">Contact</span>
       <div className="contacts">
         {contacts.map((contact) => (

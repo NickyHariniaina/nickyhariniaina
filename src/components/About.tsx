@@ -37,6 +37,7 @@ export default function About() {
           </p>
         ))}
       </div>
+      <hr className="scribble" aria-hidden="true" />
     </section>
   )
 }

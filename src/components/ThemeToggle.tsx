@@ -10,7 +10,7 @@ export default function ThemeToggle() {
     root.setAttribute('data-theme', dark ? 'dark' : 'light')
     localStorage.setItem('theme', dark ? 'dark' : 'light')
     const meta = document.querySelector('meta[name="theme-color"]')
-    if (meta) meta.setAttribute('content', dark ? '#1a1816' : '#faf7f2')
+    if (meta) meta.setAttribute('content', dark ? '#161412' : '#fcf9f4')
   }, [dark])
 
   return (
