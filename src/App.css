@@ -12,27 +12,74 @@
 }
 
 /* ---------------------------------- */
-/* Top bar + header shell             */
+/* Top bar                             */
 /* ---------------------------------- */
-
-.header-shell {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-}
 
 .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   padding-block: 12px;
   border-bottom: 1px solid var(--line);
 }
 
-.topbar__name {
+.topbar__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar__logo-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-alt);
   font-family: var(--font-display);
-  font-size: 20px;
   font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.topbar__logo:hover .topbar__logo-mark {
+  border-color: var(--primary);
+  transform: rotate(-2deg);
+}
+
+.topbar__logo-code {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+}
+
+.topbar__nav {
+  display: flex;
+  gap: 4px;
+}
+
+.topbar__nav-link {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  border-radius: var(--radius-pill);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.topbar__nav-link:hover {
+  color: var(--ink);
+  background: var(--surface-alt);
+}
+
+.topbar__nav-link--active {
+  color: var(--ink);
+  background: var(--surface-alt);
+  font-weight: 600;
 }
 
 .theme-toggle {
@@ -124,6 +171,67 @@
 }
 
 /* ---------------------------------- */
+/* Home hero split                    */
+/* ---------------------------------- */
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+/* ---------------------------------- */
+/* Showcase                           */
+/* ---------------------------------- */
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.showcase__stack {
+  position: relative;
+  padding: 24px 28px 40px;
+}
+
+.showcase__frame {
+  margin: 0;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-strong);
+  overflow: hidden;
+}
+
+.showcase__frame--dark {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 100%;
+  transform: rotate(1.5deg);
+  z-index: 0;
+}
+
+.showcase__frame--light {
+  position: relative;
+  z-index: 1;
+  transform: rotate(-1.5deg);
+}
+
+.showcase__frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.showcase__actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------------------------- */
 /* Shared                              */
 /* ---------------------------------- */
 
@@ -188,6 +296,43 @@
   font-style: italic;
   font-weight: 400;
   font-size: 1.08em;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 28px;
+  margin-top: 4px;
+}
+
+.tech__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 52px;
+}
+
+.tech__icon {
+  width: 30px;
+  height: 30px;
+  opacity: 0.85;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.tech__item:hover .tech__icon {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.tech__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.tech__item:hover .tech__label {
+  color: var(--ink);
 }
 
 .scribble {
@@ -357,6 +502,17 @@
     gap: 80px;
   }
 
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .showcase {
+    max-width: 560px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
   .projects__list {
     grid-template-columns: 1fr;
   }
@@ -373,13 +529,17 @@
     gap: 64px;
   }
 
-  .header-shell {
-    gap: 48px;
-  }
-
   .header__avatar-wrap {
     width: 128px;
     height: 128px;
+  }
+
+  .showcase__stack {
+    padding: 16px 16px 28px;
+  }
+
+  .showcase__frame--dark {
+    top: 36px;
   }
 
   .intro {
@@ -397,5 +557,9 @@
 
   .project {
     padding: 24px;
+  }
+
+  .tech {
+    gap: 16px 20px;
   }
 }

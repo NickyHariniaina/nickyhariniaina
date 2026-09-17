@@ -7,7 +7,7 @@ export type Segment = { t: string; h?: boolean; href?: string };
 
 export const about = {
     whoami: [
-        [{ t: "Helloooo, I'm Nicky." }],
+        [{ t: "Hello, I'm Nicky." }],
         [
             { t: "I build " },
             { t: "software and systems", h: true },
