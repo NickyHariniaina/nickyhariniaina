@@ -44,28 +44,26 @@ export default function Introduction() {
   return (
     <section className="block">
       <span className="eyebrow">Introduction</span>
-      <div className="intro-grid">
-        <div className="intro">
-          {about.whoami.map((paragraph, i) => (
-            <p key={i}>
-              <Segments parts={paragraph} />
-            </p>
-          ))}
-        </div>
-        <ul className="tech" aria-label="Technologies I work with">
-          {tech.map((t) => (
-            <li className="tech__item" key={t.name}>
-              <img
-                className="tech__icon"
-                src={iconBase + t.icon}
-                alt={t.name}
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-          ))}
-        </ul>
+      <div className="intro">
+        {about.whoami.map((paragraph, i) => (
+          <p key={i}>
+            <Segments parts={paragraph} />
+          </p>
+        ))}
       </div>
+      <ul className="tech" aria-label="Technologies I work with">
+        {tech.map((t) => (
+          <li className="tech__item" key={t.name}>
+            <img
+              className="tech__icon"
+              src={iconBase + t.icon}
+              alt={t.name}
+              loading="lazy"
+              decoding="async"
+            />
+          </li>
+        ))}
+      </ul>
       <hr className="scribble" aria-hidden="true" />
     </section>
   )

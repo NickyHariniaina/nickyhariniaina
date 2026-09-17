@@ -181,7 +181,7 @@
 
 .showcase__viewport {
   position: relative;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 2048 / 1362;
   border-radius: 14px;
   border: 1px solid var(--line);
   background: var(--surface);
@@ -194,7 +194,9 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center top;
+  background: var(--surface);
   opacity: 0;
   transition: opacity 0.45s ease;
 }
@@ -333,20 +335,11 @@
   font-size: 1.08em;
 }
 
-.intro-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 46ch) 1fr;
-  gap: 48px;
-  align-items: start;
-}
-
 .tech {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 18px;
-  justify-items: center;
-  align-content: start;
-  padding-top: 8px;
+  margin-top: 8px;
 }
 
 .tech__item {
@@ -545,15 +538,6 @@
     width: 100%;
   }
 
-  .intro-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .tech {
-    grid-template-columns: repeat(9, 1fr);
-  }
-
   .projects__list {
     grid-template-columns: 1fr;
   }
@@ -575,16 +559,6 @@
     height: 128px;
   }
 
-  .intro-grid {
-    gap: 20px;
-  }
-
-  .tech {
-    grid-template-columns: repeat(6, 1fr);
-    padding-top: 0;
-    gap: 16px;
-  }
-
   .intro {
     font-size: 18px;
   }
@@ -600,9 +574,5 @@
 
   .project {
     padding: 24px;
-  }
-
-  .tech {
-    gap: 16px 20px;
   }
 }
