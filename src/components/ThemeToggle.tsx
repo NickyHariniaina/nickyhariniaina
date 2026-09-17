@@ -10,7 +10,7 @@ export default function ThemeToggle() {
     root.setAttribute('data-theme', dark ? 'dark' : 'light')
     localStorage.setItem('theme', dark ? 'dark' : 'light')
     const meta = document.querySelector('meta[name="theme-color"]')
-    if (meta) meta.setAttribute('content', dark ? '#0e0e11' : '#ffffff')
+    if (meta) meta.setAttribute('content', dark ? '#1a1816' : '#faf7f2')
   }, [dark])
 
   return (
@@ -55,6 +55,7 @@ export default function ThemeToggle() {
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
       )}
+      <span>{dark ? 'Light' : 'Dark'}</span>
     </button>
   )
 }

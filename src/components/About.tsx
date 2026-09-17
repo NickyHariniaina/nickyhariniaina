@@ -5,7 +5,13 @@ function Segments({ parts }: { parts: Segment[] }) {
     <>
       {parts.map((part, i) =>
         part.href ? (
-          <a className="link" href={part.href} target="_blank" rel="noreferrer" key={i}>
+          <a
+            className="link"
+            href={part.href}
+            target="_blank"
+            rel="noreferrer"
+            key={i}
+          >
             {part.t}
           </a>
         ) : part.h ? (
@@ -22,21 +28,15 @@ function Segments({ parts }: { parts: Segment[] }) {
 
 export default function About() {
   return (
-    <>
-      <div className="neofetch__palette" aria-hidden="true">
-        <span className="palette__swatch palette__swatch--1" />
-        <span className="palette__swatch palette__swatch--2" />
-        <span className="palette__swatch palette__swatch--3" />
-        <span className="palette__swatch palette__swatch--4" />
-      </div>
-
-      <section className="block">
+    <section className="block">
+      <span className="eyebrow">About</span>
+      <div className="intro">
         {about.whoami.map((paragraph, i) => (
           <p key={i}>
             <Segments parts={paragraph} />
           </p>
         ))}
-      </section>
-    </>
+      </div>
+    </section>
   )
 }

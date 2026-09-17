@@ -3,16 +3,14 @@ import { contacts } from '../data'
 export default function Footer() {
   return (
     <section className="block">
-      <div className="footer__sep">
-        ================================================
-      </div>
-      <ul className="contacts__list">
+      <span className="eyebrow">Contact</span>
+      <div className="contacts">
         {contacts.map((contact) => (
-          <li key={contact.label}>
-            <span className="contacts__label">- {contact.label}: </span>
+          <div className="contacts__item" key={contact.label}>
+            <span className="contacts__label">{contact.label}</span>
             {contact.href ? (
               <a
-                className="link"
+                className="contacts__value link"
                 href={contact.href}
                 target={
                   contact.href.startsWith('http') ? '_blank' : undefined
@@ -22,11 +20,11 @@ export default function Footer() {
                 {contact.value}
               </a>
             ) : (
-              <span>{contact.value}</span>
+              <span className="contacts__value">{contact.value}</span>
             )}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   )
 }
