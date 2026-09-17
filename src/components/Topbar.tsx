@@ -5,7 +5,6 @@ export default function Topbar() {
   return (
     <div className="topbar">
       <Link to="/" className="topbar__logo" aria-label="Home">
-        <span className="topbar__logo-mark">NH</span>
         <span className="topbar__logo-code">&lt;/&gt;</span>
       </Link>
       <nav className="topbar__nav" aria-label="Main">
