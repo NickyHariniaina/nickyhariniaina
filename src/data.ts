@@ -62,7 +62,7 @@ export const projects: Project[] = [
         id: "emosion",
         title: "emosion",
         description:
-            "Local facial emotion detection for images, webcam streams, and video files — YuNet face detection plus a ViT emotion classifier with confidence scores. Fully offline, no API keys.",
+            "Local facial emotion detection for images, webcam streams, and video files, using YuNet face detection plus a ViT emotion classifier with confidence scores. Fully offline, no API keys.",
         source: "https://github.com/NickyHariniaina/emosion",
         tags: ["python", "opencv", "vision", "onnx"],
     },
