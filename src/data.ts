@@ -46,9 +46,20 @@ export type Project = {
     preview?: string;
     source?: string;
     tags: string[];
+    status?: "wip";
 };
 
 export const projects: Project[] = [
+    {
+        id: "taxib",
+        title: "taxib",
+        description:
+            "Bus route planner for Antananarivo. Map-first trip planning over live OSM data: nearby stops, bus lines passing a point, and real road routing between two points. Frontend in React and TypeScript, backed by a Spring Boot and Postgres API I am building.",
+        preview: "https://taxib.vercel.app",
+        source: "https://github.com/NickyHariniaina/taxib-frontend",
+        tags: ["react", "typescript", "vite", "leaflet", "gis"],
+        status: "wip",
+    },
     {
         id: "brainfart",
         title: "Brainfart",

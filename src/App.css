@@ -452,12 +452,42 @@
   border-color: var(--line);
 }
 
+.project__head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .project__name {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 28px;
   line-height: 1.1;
   transition: font-style 0.15s ease;
+}
+
+.project__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface-alt);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.project__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-soft);
 }
 
 .project:hover .project__name {
