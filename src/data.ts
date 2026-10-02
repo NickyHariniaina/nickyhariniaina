@@ -54,10 +54,10 @@ export const projects: Project[] = [
         id: "taxib",
         title: "taxib",
         description:
-            "Bus route planner for Antananarivo. Map-first trip planning over live OSM data: nearby stops, bus lines passing a point, and real road routing between two points. Frontend in React and TypeScript, backed by a Spring Boot and Postgres API I am building.",
+            "Tells you which bus to take to get where you want to go in Antananarivo, instead of guessing the route or asking whoever is sitting next to you in the taxi-be.",
         preview: "https://taxib.vercel.app",
         source: "https://github.com/NickyHariniaina/taxib-frontend",
-        tags: ["react", "typescript", "vite", "leaflet", "gis"],
+        tags: ["react", "typescript", "vite", "leaflet", "gis", "java"],
         status: "wip",
     },
     {
