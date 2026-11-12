@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 
 const lightSlides = [
   { src: '/light-brainfarter.png', alt: 'Brainfart preview – light theme' },
-  { src: '/dradraft-light.png', alt: 'Dradraft preview – light theme' },
+  { src: '/taxib.png', alt: 'Taxib preview' },
 ]
 
 const darkSlides = [
   { src: '/dark-brainfarter.png', alt: 'Brainfart preview – dark theme' },
-  { src: '/dradraft-dark.png', alt: 'Dradraft preview – dark theme' },
+  { src: '/taxib.png', alt: 'Taxib preview' },
 ]
 
 function useTheme() {
