@@ -53,6 +53,7 @@
 }
 
 .topbar__nav {
+  position: relative;
   display: flex;
   gap: 2px;
   padding: 4px;
@@ -61,13 +62,29 @@
   box-shadow: var(--shadow-well);
 }
 
+.topbar__nav-knob {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: calc(100% - 8px);
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+  box-shadow: var(--shadow-card);
+  z-index: 0;
+  pointer-events: none;
+  transition: transform 0.45s var(--ease-spring), width 0.45s var(--ease-spring),
+    background-color 0.35s var(--ease-out);
+}
+
 .topbar__nav-link {
+  position: relative;
+  z-index: 1;
   padding: 8px 16px;
   font-size: 14px;
   font-weight: 600;
   color: var(--muted);
   border-radius: var(--radius-pill);
-  transition: color 0.15s var(--ease-out), background 0.15s var(--ease-out);
+  transition: color 0.2s var(--ease-out);
 }
 
 .topbar__nav-link:hover {
@@ -75,10 +92,12 @@
   background: var(--surface-alt);
 }
 
-.topbar__nav-link--active {
+.topbar__nav-link--active,
+.topbar__nav-link--active:hover {
   color: var(--lit);
-  background: var(--primary);
+  background: none;
   font-weight: 700;
+  transition: color 0.2s var(--ease-out) 0.25s;
 }
 
 .theme-toggle {
